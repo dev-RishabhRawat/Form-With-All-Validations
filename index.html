@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>Registration Form</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(184, 203, 238);
+            font-family: 'Lato', sans-serif;
+        }
+        header {
+            background-color: #000000 !important;
+            color: #fff;
+            text-align: center;
+            padding: 10px auto;
+            height: 50px;
+            font-family: 'Anton', sans-serif;
+            letter-spacing: 5px;
+        }
+
+        legend {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .formFields {
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        fieldset {
+            padding: 1rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+        }
+
+        .row .col {
+            display: flex;
+            flex: 1;
+            margin: 10px 0;
+        }
+
+        .row .col label {
+            flex-basis: 15%;
+            font-weight: bold;
+        }
+
+        .row .col input {
+            flex-basis: 80%;
+            outline: none;
+           
+        }
+     
+        .border {
+            border: 2px double black;
+            display: flex;
+           flex-direction: column;
+           width: 100%;
+           padding: 10px;
+           margin: 10px auto;
+        }
+      input[type="submit"]{
+          width: 80px;
+          padding: 5px;
+          border-radius: 10px;
+          outline: none;
+          font-weight: bold;
+      }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Registration Form</h1>
+    </header>
+    <div class="formFields">
+        <fieldset>
+            <legend>Simple Registration Form With Validations </legend>
+            <form action="">
+               <div class="border">
+                <h2>Personal Information:</h2>   
+                <div class="row">
+                    <div class="col">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required placeholder="Rishabh">
+                    </div>
+                    <div class="col">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required placeholder="Rawat">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="dob">DOB:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="col">
+                        <label for="mobile_num">Contact:</label>
+                        <input type="number" id="mobile_num" name="mobile_num" required min="10" max="12">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="col">
+                        <label for="male">Male</label>
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="female">Female</label>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="other">Other</label>
+                        <input type="radio" id="other" name="gender" value="other" required>
+                    </div>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="border">
+                        <h2>Address:</h2>
+                        <div  class="col">
+                            <label for="house_num">House No./Apartment Name/Block No</label>
+                            <input type="text" name="house_num" id="house_num" required >
+                        </div>
+                        <div  class="col">
+                            <label for="Street">Road/Street/Lane</label>
+                            <input type="text" name="Street" id="Street" required >
+                        </div>
+                        <div  class="col">
+                            <label for="area">Area/Landmark</label>
+                            <input type="text" name="area" id="area" required >
+                        </div>
+                        <div  class="col">
+                            <label for="city">City </label>
+                            <input type="text" name="city" id="city" required >
+                        </div>
+                        <div  class="col">
+                            <label for="State">State</label>
+                            <input type="text" name="State" id="State" required >
+                        </div>
+                        <div  class="col">
+                            <label for="pic_code">PIN Code</label>
+                            <input type="text" name="pic_code" id="pic_code" required >
+                        </div>
+                        <div  class="col">
+                            <label for="country">Country </label>
+                            <input type="text" name="country" id="country" required >
+                        </div>
+                    </div>
+                </div>
+                <div class="border">
+                    <h2>ACADEMIC DETAILS:</h2>
+                    <h3 >Post Graduation-</h3>
+                    <div class="row">
+                        <div class="col">                            
+                            <label for="post_graduation">University/Institute</label>
+                            <input type="text" name="post_graduation" id="post_graduation" required >
+                            <label for="pg_per">Percentage</label>
+                            <input type="text" name="pg_per" id="pg_per" required >
+                        </div>
+                    </div>
+                    <h3 >Graduation-</h3>
+                    <div class="row">
+                        <div class="col">                            
+                            <label for="graduation">University/Institute</label>
+                            <input type="text" name="graduation" id="graduation" required >
+                            <label for="ug_per">Percentage</label>
+                            <input type="text" name="ug_per" id="ug_per" required >
+                        </div>
+                    </div>
+                    <h3 >Intermediate-</h3>
+                    <div class="row">
+                        <div class="col">                            
+                            <label for="intermediate">University/Institute</label>
+                            <input type="text" name="intermediate" id="intermediate" required >
+                            <label for="inter_per">Percentage</label>
+                            <input type="text" name="inter_per" id="inter_per" required >
+                        </div>
+                    </div>
+                    <h3 >Highschool-</h3>
+                    <div class="row">
+                        <div class="col">                            
+                            <label for="highschool">University/Institute</label>
+                            <input type="text" name="highschool" id="highschool" required >
+                            <label for="Highschool_per">Percentage</label>
+                            <input type="text" name="Highschool_per" id="Highschool_per" required >
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                <input type="submit" value="submit">
+            </div>
+            </form>
+        </fieldset>
+    </div>
+</body>
+
+</html>
