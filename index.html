@@ -33,7 +33,7 @@
         }
 
         .formFields {
-            width: 100%;
+            min-width: 100%;
             min-height: 100vh;
         }
 
@@ -88,6 +88,31 @@
           color: #333333;
           opacity: 0.7;
       }
+    @media  (max-width: 767px) {
+        header{
+            width: 500px;
+        }
+        .formFields {
+           width: 100%;
+        }
+        .row .col input {
+            flex-basis: 60%;
+            outline: none;  
+            align-items: flex-end;         
+        }
+        .border .row {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+        }
+        .row .col label {
+            flex-basis: 20%;
+            font-weight: bold;
+        }
+    }
+     
     </style>
 </head>
 
@@ -119,7 +144,7 @@
                     </div>
                     <div class="col">
                         <label for="mobile_num">Contact:</label>
-                        <input type="number" id="mobile_num" name="mobile_num" required min="10" max="12">
+                        <input type="number" id="mobile_num" name="mobile_num" required maxlength="12">
 
                     </div>
                 </div>
@@ -178,6 +203,8 @@
                         <div class="col">                            
                             <label for="post_graduation">University/Institute</label>
                             <input type="text" name="post_graduation" id="post_graduation" required >
+                        </div>
+                            <div class="col">  
                             <label for="pg_per">Percentage</label>
                             <input type="text" name="pg_per" id="pg_per" required >
                         </div>
@@ -187,15 +214,20 @@
                         <div class="col">                            
                             <label for="graduation">University/Institute</label>
                             <input type="text" name="graduation" id="graduation" required >
-                            <label for="ug_per">Percentage</label>
-                            <input type="text" name="ug_per" id="ug_per" required >
                         </div>
+                        <div class="col">
+                              <label for="ug_per">Percentage</label>
+                            <input type="text" name="ug_per" id="ug_per" required >
+                            </div>
+                        
                     </div>
                     <h3 >Intermediate-</h3>
                     <div class="row">
                         <div class="col">                            
                             <label for="intermediate">University/Institute</label>
                             <input type="text" name="intermediate" id="intermediate" required >
+                        </div>
+                        <div class="col">  
                             <label for="inter_per">Percentage</label>
                             <input type="text" name="inter_per" id="inter_per" required >
                         </div>
@@ -205,6 +237,8 @@
                         <div class="col">                            
                             <label for="highschool">University/Institute</label>
                             <input type="text" name="highschool" id="highschool" required >
+                        </div>
+                        <div class="col">  
                             <label for="Highschool_per">Percentage</label>
                             <input type="text" name="Highschool_per" id="Highschool_per" required >
                         </div>
